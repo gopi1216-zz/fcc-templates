@@ -1,0 +1,49 @@
+/* || Variables and resets */
+:root{
+  --primary: #3c3c3c;
+  --secondary: #979797;
+  --accent: #1E8BC3;
+  --ternary: #fff;
+  --ternary-2: #ddd;
+  --bg: #f2f2f2;
+}
+@font-face{src: url(fonts/OpenSans-Regular.ttf); font-family: Regular}
+@font-face{src: url(fonts/OpenSans-SemiBold.ttf); font-family: semiBold}
+@font-face{src: url(fonts/OpenSans-Bold.ttf); font-family: Bold}
+::-webkit-scrollbar{width: .25rem}
+::-webkit-scrollbar-track{background: #0000}
+::-webkit-scrollbar-thumb{background: #666}
+
+/* || Utilities */
+.d-f{display: flex}
+.ai-c{align-items: center}
+.jc-c{justify-content: center}
+.fg-1{flex-grow: 1}
+.jc-sb{justify-content: space-between}
+.ta-c{text-align: center}
+.ta-r{text-align: right}
+
+
+/* :: Headings */
+h1, h2, h3, h4, h5, h6{font-family: Bold}
+
+
+/* || Global styles */
+*{margin: 0; padding: 0; font: 1rem/1.5 Regular}
+span, a, i{display: inline-block}
+a, a:link, a:active, a:visited, a:hover{outline: none; text-decoration: none}
+ul{list-style: none}
+
+/* :: Layout styles */
+main{height: 100vh; display: grid; grid-template: 5rem 1fr auto/1fr; color: var(--primary)}
+header{padding: 1rem 1.5rem; box-shadow: 0 .125rem .5rem #aaa8}
+.navbar{ gap: 1rem }
+.nav-link{font-family: semibold; color: var(--primary); position: relative}
+.nav-link:hover{color: var(--accent)}
+.nav-link::after{content: ''; position: absolute; width: 0; height: .25rem; background-color: var(--accent); left: 0; transition: all .3s linear; bottom: -.375rem}
+.nav-link:hover::after{width: 100%}
+footer{padding: .5rem 1.5rem; color: var(--secondary); border-top: 1px solid var(--ternary-2); background: var(--bg)}
+
+/* :: Common changes */
+h1{font-size: 1.5rem; color: var(--accent)}
+
